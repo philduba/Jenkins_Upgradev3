@@ -4,7 +4,7 @@ job('First-Maven-Project-Via-DSL') {
         git("https://github.com/philduba/Jenkins_Upgradev3.git", 'master')
     }
     triggers {
-        scm('* * * * *')
+        scm('H/15 * * * *')
     }
     steps {
         maven('clean package', 'maven-samples/single-module/pom.xml')
