@@ -5,7 +5,7 @@ pipeline {
     }
     stages{
         stage('Build Application') {
-            steps {
+            steps{
                 sh 'mvn -f java-tomcat-sample/pom.xml clean package'
             }
             post {
@@ -16,8 +16,8 @@ pipeline {
             }
         }
         stage('Deploy to Staging Environment') {
-            steps {
-                build job 'Deploy_Application_Staging_Env'
+            steps{
+                build job: 'Deploy_Application_Staging_Env'
             }
         }
     }
