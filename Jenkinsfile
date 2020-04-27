@@ -12,9 +12,14 @@ pipeline {
                         echo 'Building Sampl Maven Project'
                   }
             }
-            stage('Deploy'){
+            stage('Deploy Staging'){
                   steps{
                         echo 'Deploying in Staging Area'
+                  }
+            }
+            stage('Deploy Production'){
+                  steps{
+                        echo 'Deploying in Production Area'
                   }
             }
       }
